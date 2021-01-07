@@ -6,23 +6,55 @@
     <meta charset="utf-8" />
     <meta name="description" content="This is my website" />
     <style>
-      :root {
-        --main-color: #fcce00;
-      }
       body {
-        height: 1000vh;
-        margin: 50px;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
       }
-      p::first-letter {
-        font-size: 20px;
-        color: var(--main-color);
-        background-color: sienna;
+      @keyframes flipStyle {
+        0% {
+          transform: rotateY(0deg);
+        }
+        25% {
+          transform: scale(2);
+        }
+        50% {
+          border-radius: 0px;
+          transform: rotateY(180deg);
+          border-color: tomato;
+        }
+        75% {
+          transform: scale(2);
+          border-radius: 20px;
+        }
+        100% {
+          transform: rotateY(0);
+        }
       }
+      img {
+        border: 5px solid grey;
+        border-radius: 50%;
+        width: 200px;
+        animation: flipStyle 5s ease-in-out infinite;
+      }
+      /* svg {
+        fill: yellow;
+        stroke: black;
+        stroke-width: 2;
+        transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      }
+      svg:hover {
+        fill: blue;
+        stroke: purple;
+        stroke-width: 10;
+      } */
     </style>
   </head>
   <body>
-    <p>
-      asdsadsafsdgsdagdslgahjoweiuvhnardlbjdfvdnjdksl;vasdvujadf;bvadfvbua;vfoiawhfwaawrlaksfhjsafavaljdsvnadfv
-    </p>
+    <img src="curby.png" />
+    <!-- <svg height="140" width="500">
+      <ellipse cx="200" cy="80" rx="100" ry="50" />
+    </svg> -->
   </body>
 </html>
